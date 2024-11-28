@@ -59,10 +59,10 @@ header h1 {
 .exercise-card2 { grid-area: 2 / 2 / 3 / 3; }
 .exercise-card3 { grid-area: 2 / 3 / 3 / 4; }
 .exercise-card4 { grid-area: 2 / 4 / 3 / 5; }
-.exercise-card5 { grid-area: 3 / 4 / 4 / 5; }
-.exercise-card6 { grid-area: 3 / 3 / 4 / 4; }
-.exercise-card7 { grid-area: 3 / 2 / 4 / 3; }
-.exercise-card8 { grid-area: 3 / 1 / 4 / 2; }
+.exercise-card5 { grid-area: 3 / 1 / 4 / 2; }
+.exercise-card6 { grid-area: 3 / 2 / 4 / 3; }
+.exercise-card7 { grid-area: 3 / 3 / 4 / 4; }
+.exercise-card8 { grid-area: 3 / 4 / 4 / 5; }
 .exercise-card9 { grid-area: 4 / 1 / 5 / 2; }
 .exercise-card10 { grid-area: 4 / 2 / 5 / 3; }
 
