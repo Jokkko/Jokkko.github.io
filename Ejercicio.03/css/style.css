@@ -1,0 +1,45 @@
+h1, h2{
+    color: Blue;
+}
+h3{
+    color: orange;
+}
+
+
+.p-crimson{
+    color:crimson;
+}
+
+.p-lime{
+    color: lime;
+}
+
+.p-pink{
+    color: pink;
+}
+
+.p-skyblue{
+    color: skyblue;
+}
+
+.p-purple{
+    color:purple
+}
+
+.p-purple span{
+    color: blueviolet;
+}
+
+.p-skyblue span{
+    color:aquamarine;
+}
+.p-pink span{
+    color: violet;
+}
+.p-lime span{
+    color:olive;
+}
+
+.p-crimson span{
+    color:brown;
+}

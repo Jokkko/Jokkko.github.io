@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios con Plugins jQuery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.12.1/simple-lightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rafaelbotazini/floating-whatsapp/floating-wpp.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .jarallax {
+            height: 500px;
+        }
+        .jarallax-img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        Profe, no entendi a que ejercicios hacia referencia con 
+        ..."en los archivos de ejercicios previos de Position con CSS"...
+        Por lo que implemente los plugins aca. Espero no haya problema!
+    -->
+
+    <section>
+        <h2>Carrusel de Imágenes</h2>
+        <div class="owl-carousel">
+            <img src="https://placehold.co/400x200" alt="Imagen 1">
+            <img src="https://placehold.co/400x200" alt="Imagen 2">
+            <img src="https://placehold.co/400x200" alt="Imagen 3">
+        </div>
+    </section>
+
+    <div id="whatsapp-button"></div>
+
+    <section class="jarallax" data-jarallax data-speed="0.5">
+        <div class="jarallax-img" style="background-image: url('https://placehold.co/1000x800');"></div>
+        <h2 style="text-align: center; color: white; padding: 200px 0;">Animación Parallax</h2>
+    </section>
+
+    <section>
+        <h2>Galería con Lightbox</h2>
+        <div class="gallery">
+            <a href="#"><img src="https://placehold.co/800x600" alt="Imagen 1"></a>
+            <a href="#"><img src="https://placehold.co/800x600" alt="Imagen 2"></a>
+            <a href="#"><img src="https://placehold.co/800x600" alt="Imagen 3"></a>
+        </div>
+    </section>
+
+    <section>
+        <h2>Slider de Contenido</h2>
+        <div class="content-slider">
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, error.</div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos harum quidem, quibusdam perspiciatis ad laudantium.</div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aspernatur ratione. Voluptas, fuga.</div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.12.1/simple-lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/rafaelbotazini/floating-whatsapp/floating-wpp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.12.8/jarallax.min.js"></script>
+
+    <script>
+        $(document).ready(function() { 
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: { items: 1 },
+                    600: { items: 2 },
+                    1000: { items: 3 }
+                }
+            });
+ 
+            $('#whatsapp-button').floatingWhatsApp({
+                phone: '1234567890',
+                popupMessage: '¡Hola! ¿En qué puedo ayudarte?',
+                showPopup: true,
+                headerTitle: 'Contáctanos por WhatsApp',
+                buttonImage: '<img src="https://cdn.jsdelivr.net/gh/rafaelbotazini/floating-whatsapp/whatsapp.svg" />',
+                position: 'right'
+            });
+ 
+            jarallax(document.querySelectorAll('.jarallax'), { speed: 0.5 });
+ 
+            let lightbox = new SimpleLightbox('.gallery a', {
+                captions: true,
+                captionSelector: 'self',
+                captionType: 'attr',
+                captionsData: 'alt',
+                captionPosition: 'bottom',
+                captionDelay: 250
+            });
+ 
+            $('.content-slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true
+            });
+        });
+    </script>
+</body>
+</html>

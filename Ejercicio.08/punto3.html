@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>punto3</title>
+</head>
+<body>
+    <script>
+        let ladoUno = parseInt(prompt("Ingresa el valor del primer lado del triangulo: "));
+        let ladoDos = parseInt(prompt("Ingresa el valor del segundo lado del triangulo: "));
+        let ladoTres = parseInt(prompt("Ingresa el valor del tercer lado del triangulo: "));
+        let tipoTriangulo;
+    </script>
+    <script>
+        if(ladoUno == ladoDos && ladoDos == ladoTres){
+            tipoTriangulo = "Equilatero"
+        }else if(ladoUno == ladoDos || ladoUno == ladoTres || ladoDos == ladoTres){
+            tipoTriangulo = "Isosceles"
+        }else{
+            tipoTriangulo = "Escaleno"
+        }
+        alert("El triangulo es: " + tipoTriangulo);
+    </script>
+</body>
+</html>

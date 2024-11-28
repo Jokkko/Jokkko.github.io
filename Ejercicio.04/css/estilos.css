@@ -1,0 +1,67 @@
+.bg-skyblue{
+    background-color: skyblue;
+}
+.m-20px {
+    margin: 20px;
+}
+.p-15px{
+    padding: 15px;
+}
+.bg-img-uade{
+    background-image: url("../img/uade_una_gran_universidad.png");
+    background-repeat: no-repeat;
+}
+.bg-size-50{
+    background-size: 50%;
+    background-repeat: repeat-y;
+}
+.bg-position-center{
+    background-position: center;
+}
+.bg-position-bottom-right{
+    background-position: 100% 100%;
+}
+
+.border-solid-red-2px{
+    border: 2px, solid,red;
+    border-radius: 10px;
+}
+
+#ejercicio4 p{
+    padding: 5px;
+    font-weight: bold;
+    border: 2px, solid,black;
+}
+
+.bg-color-yellow{
+    background-color: yellow;
+}
+.txt-aling-center{
+    text-align: center;
+}
+.border-double-5px-purple{
+    border: double, 5px, purple;
+}
+.bg-color-gold{
+    background-color: gold;
+}
+.m-40px{
+    margin: 40px;
+}
+#btnEjercicio9{
+    background-color: skyblue;
+    margin: 5px 0px;
+}
+.bg-position-top-100{
+    background-position: 100% 0%;
+    background-repeat: repeat-x;
+}
+.w50{
+    width: 50%;
+} 
+.border-point-3px-green {
+    border: 3px,green,dotted;
+}
+.p-25px{
+    padding: 25px;
+}
